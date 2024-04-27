@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        tr,
+        th,
+        td {
+            border: 1px solid blue;
+        }
+        body
+        {
+            background-image: url("https://www.phoneswiki.com/wp-content/uploads/2021/03/top-20-portable-gadgets-for-2021-1536x1536.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+           
+        }
+    
+    </style>
+   
+</head>
+
+<body>
+    <h1>Display product information</h1>
+    <table>
+        <tr>
+            <th>Product ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </tr>
+        <%data.forEach(products=>{%>
+            <tr>
+                <td>
+                   <%=products.product_id%>
+                </td>
+                <td>
+                    <%=products.name%>
+                </td>
+                <td>
+                    <%=products.description%>
+                </td>
+                <td>
+                    <%=products.price%>
+                </td>
+                <td>
+                    <%=products.quantity%>
+                </td>
+            </tr>
+            <%})%>
+    </table>
+    <p>
+        <a href="http://localhost:8080/ ">|Go home|</a></p>
+</body>
+
+</html>
